@@ -1,0 +1,39 @@
+@media all and (max-width: 767px) {
+  body {
+    min-width: none;
+    max-width: 767px;
+  }
+
+  header {
+    padding: 18px 28px;
+    min-width: auto;
+  }
+  header .headerMenu {
+    display: none;
+  }
+  header .login {
+    display: none;
+  }
+  header .menuBtn {
+    background-image: url(/src/button_mo_gnb.svg);
+    display: block;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  header.scroll .menuBtn {
+    background-image: url(/src/button_mo_gnb_black.svg);
+  }
+
+  main .container {
+    height: 100vh;
+  }
+  main .mainTitle {
+    border: 1px solid black;
+    width: 327px;
+    font-size: 20px;
+  }
+  main .mainTitle #bgMain {
+    height: 90px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

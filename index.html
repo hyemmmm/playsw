@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
     <title>소프트웨어야 놀자</title>
   </head>
   <body>
@@ -20,6 +21,7 @@
         <li><a href="#">아카이브</a></li>
       </ul>
       <div class="login">로그인</div>
+      <div class="menuBtn"></div>
     </header>
     <main>
       <div class="container">
@@ -112,9 +114,10 @@
           </p>
           <div>자세히 보기</div>
           <video
+            src="https://b01-kr-naver-vod.pstatic.net/navertv/c/read/v2/VOD_ALPHA/navertv_2020_06_26_411/7709d7e7-b77d-11ea-871d-246e96398ca5.mp4?_lsu_sa_=619598f3815965f619dd25d26fe51bb5fe8e3608ed0e8f8f37a7f3cc57783015a7236a996085f50d40583c226f3c0b435fdad5778e1242f84bdb25cca8d88558ab4fbd3eb1f2fd8a29aee8a07a23dca2"
+            poster="./src/videoImage.webp"
             autoplay
             muted
-            src="https://b01-kr-naver-vod.pstatic.net/navertv/c/read/v2/VOD_ALPHA/navertv_2020_06_26_411/7709d7e7-b77d-11ea-871d-246e96398ca5.mp4?_lsu_sa_=6f45b1f071eb63f63fde15e06205d6b05edd36f8c8045fe53fe7ffc407c43625e72baa2165951a0bf09e30226232cb590d8c82b4e3bb933dc95be61c305161a031f20c764d124a198bd12ef45a8a83aa"
           ></video>
         </div>
         <div class="section3">
@@ -176,16 +179,8 @@
             </div>
             <div class="buttonArea">
               <div class="button">
-                <img
-                  src="./src/button_arrow_left.svg"
-                  alt="buttonLeft"
-                  id="buttonLeft"
-                />
-                <img
-                  src="./src/button_arrow_right_on.svg"
-                  alt="buttonRight"
-                  id="buttonRight"
-                />
+                <div id="buttonLeft"></div>
+                <div id="buttonRight" class="on"></div>
               </div>
             </div>
           </div>
@@ -200,44 +195,48 @@
             </p>
             <div>자세히 보기</div>
           </div>
-          <ul>
-            <li>
-              <img src="./src/news1.png" alt="newsImage" />
-              <p class="category">스토리</p>
-              <p class="title">소프트웨어야 놀자 대학생 멘토 10월 V-day</p>
-              <p class="date">2021.11.15</p>
-            </li>
-            <li>
-              <img src="./src/news2.jpg" alt="newsImage" />
-              <p class="category">스토리</p>
-              <p class="title">소프트웨어야 놀자 With Teachers_고경수 선생님</p>
-              <p class="date">2021.11.01</p>
-            </li>
-            <li>
-              <img src="./src/news3.png" alt="newsImage" />
-              <p class="category">스토리</p>
-              <p class="title">소프트웨어야 놀자 대학생 멘토 8월 V-day</p>
-              <p class="date">2021.09.06</p>
-            </li>
-            <li>
-              <img src="./src/news4.png" alt="newsImage" />
-              <p class="category">스토리</p>
-              <p class="title">2021 소프트웨어야 놀자 대학생 멘토 발대식</p>
-              <p class="date">2021.07.23</p>
-            </li>
-            <li>
-              <img src="./src/news5.png" alt="newsImage" />
-              <p class="category">뉴스</p>
-              <p class="title">
-                네이버 커넥트재단, '소프트웨어야 놀자 인공지능 윤리 교재' 발간
-              </p>
-              <p class="date">2021.06.30</p>
-            </li>
-          </ul>
+          <div class="newsWindow">
+            <ul>
+              <li>
+                <img src="./src/news1.png" alt="newsImage" />
+                <p class="category">스토리</p>
+                <p class="title">소프트웨어야 놀자 대학생 멘토 10월 V-day</p>
+                <p class="date">2021.11.15</p>
+              </li>
+              <li>
+                <img src="./src/news2.jpg" alt="newsImage" />
+                <p class="category">스토리</p>
+                <p class="title">
+                  소프트웨어야 놀자 With Teachers_고경수 선생님
+                </p>
+                <p class="date">2021.11.01</p>
+              </li>
+              <li>
+                <img src="./src/news3.png" alt="newsImage" />
+                <p class="category">스토리</p>
+                <p class="title">소프트웨어야 놀자 대학생 멘토 8월 V-day</p>
+                <p class="date">2021.09.06</p>
+              </li>
+              <li>
+                <img src="./src/news4.png" alt="newsImage" />
+                <p class="category">스토리</p>
+                <p class="title">2021 소프트웨어야 놀자 대학생 멘토 발대식</p>
+                <p class="date">2021.07.23</p>
+              </li>
+              <li>
+                <img src="./src/news5.png" alt="newsImage" />
+                <p class="category">뉴스</p>
+                <p class="title">
+                  네이버 커넥트재단, '소프트웨어야 놀자 인공지능 윤리 교재' 발간
+                </p>
+                <p class="date">2021.06.30</p>
+              </li>
+            </ul>
+          </div>
           <div class="buttonArea">
             <div class="button">
-              <img src="./src/button_arrow_left.svg" alt="buttonLeft" />
-              <img src="./src/button_arrow_right_on.svg" alt="buttonRight" />
+              <div id="buttonLeft2"></div>
+              <div id="buttonRight2" class="on"></div>
             </div>
           </div>
         </div>

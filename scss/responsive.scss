@@ -1,0 +1,43 @@
+@media all and (max-width: 767px) {
+  body {
+    min-width: none;
+    max-width: 767px;
+    // overflow-x: hidden;
+  }
+  header {
+    padding: 18px 28px;
+    min-width: auto;
+    // border: 1px solid white;
+    .headerMenu {
+      display: none;
+    }
+    .login {
+      display: none;
+    }
+    .menuBtn {
+      background-image: url(/src/button_mo_gnb.svg);
+      display: block;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
+    &.scroll {
+      .menuBtn {
+        background-image: url(/src/button_mo_gnb_black.svg);
+      }
+    }
+  }
+  main {
+    .container {
+      height: 100vh;
+    }
+    .mainTitle {
+      border: 1px solid black;
+      width: 327px;
+      font-size: 20px;
+      #bgMain {
+        height: 90px;
+      }
+    }
+  }
+}
