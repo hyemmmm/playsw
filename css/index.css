@@ -49,6 +49,10 @@
     transform: translateY(0px);
   }
 }
+.btn {
+  color: red;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -77,7 +81,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 99;
 }
 header .logo {
   background-image: url(/src/logo.svg);
@@ -125,7 +129,6 @@ main .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -1;
   position: relative;
 }
 main .container .mainTitle {
@@ -133,15 +136,20 @@ main .container .mainTitle {
   font-size: 22px;
   padding-right: 560px;
   min-width: 680px;
-  z-index: 4;
-}
-main .container .mainTitle > img {
   cursor: pointer;
 }
-main .container .mainTitle p {
+main .container .mainTitle #mainTitleImg {
+  width: 680px;
+  z-index: 99;
+  position: relative;
+}
+main .container .mainTitle .normal {
   margin: 28px 0;
   line-height: 37px;
-  cursor: pointer;
+  width: 420px;
+}
+main .container .mainTitle .responsive {
+  display: none;
 }
 main .container .mainTitle .imgs #bgMain {
   position: absolute;
@@ -149,6 +157,13 @@ main .container .mainTitle .imgs #bgMain {
   right: 360px;
   height: 855px;
   z-index: 1;
+}
+main .container .mainTitle .imgs #bgMainR {
+  display: none;
+  width: 179px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
 }
 main .container .mainTitle .imgs #ani1 {
   position: absolute;
@@ -204,6 +219,9 @@ main .container2 .imgs #bgObject1 {
   right: 85px;
   z-index: 1;
 }
+main .container2 .imgs #bgObject1R {
+  display: none;
+}
 main .container2 .imgs #bgObject2 {
   position: absolute;
   top: 42px;
@@ -242,16 +260,19 @@ main .container2 .imgs #bgObject6 {
   animation: infinite circle3 linear;
   animation-duration: 9s;
 }
+main .container2 .imgs #bgObjectOnlyR {
+  display: none;
+}
 main .container2 .section1 {
   margin-left: 380px;
+  z-index: 10;
+  position: relative;
 }
 main .container2 .section1 h2 {
   font-size: 44px;
   font-family: NanumSquareRoundOTFEB;
   margin-top: 28px;
   margin-bottom: 42px;
-  position: relative;
-  z-index: 1;
 }
 main .container2 .section1 p {
   color: #666666;
@@ -286,12 +307,18 @@ main .container2 .section2 h2 {
   font-size: 70px;
   margin-bottom: 56px;
 }
+main .container2 .section2 #Rh2 {
+  display: none;
+}
 main .container2 .section2 p {
   color: #666666;
   font-size: 23px;
   line-height: 37px;
   margin-bottom: 56px;
   text-align: center;
+}
+main .container2 .section2 p:last-of-type {
+  display: none;
 }
 main .container2 .section2 div {
   background-color: #92f5d9;
@@ -312,6 +339,8 @@ main .container2 .section2 video {
 }
 main .container2 .section3 {
   display: flex;
+  z-index: 2;
+  position: relative;
 }
 main .container2 .section3 .desc {
   padding: 104px;
@@ -323,7 +352,6 @@ main .container2 .section3 .desc h2 {
   margin-top: 28px;
   margin-bottom: 42px;
   position: relative;
-  z-index: 1;
   width: 420px;
 }
 main .container2 .section3 .desc p {
@@ -347,7 +375,6 @@ main .container2 .section3 .desc div:hover {
 }
 main .container2 .section3 .swiperBox {
   margin: 104px 0;
-  z-index: 1;
 }
 main .container2 .section3 .swiperBox .window {
   overflow: hidden;
@@ -428,6 +455,19 @@ main .container2 .section3 .swiperBox .buttonArea .button #buttonRight {
 }
 main .container2 .section3 .swiperBox .buttonArea .button #buttonRight.on {
   background-image: url("/src/button_arrow_right_on.svg");
+}
+main .container2 .section3 #R-Btn {
+  background-color: #92f5d9;
+  display: none;
+  padding: 18px 56px;
+  border-radius: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: NanumSquareRoundOTFEB;
+  transition: 0.28s;
+}
+main .container2 .section3 #R-Btn:hover {
+  background-color: #00eda9;
 }
 main .container2 .section4 {
   margin: 28px 0 104px;
@@ -531,6 +571,19 @@ main .container2 .section4 .buttonArea .button #buttonRight2 {
 }
 main .container2 .section4 .buttonArea .button #buttonRight2.on {
   background-image: url("/src/button_arrow_right_on.svg");
+}
+main .container2 .section4 #R-Btn2 {
+  background-color: #92f5d9;
+  display: none;
+  padding: 18px 56px;
+  border-radius: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: NanumSquareRoundOTFEB;
+  transition: 0.28s;
+}
+main .container2 .section4 #R-Btn2:hover {
+  background-color: #00eda9;
 }
 
 footer {

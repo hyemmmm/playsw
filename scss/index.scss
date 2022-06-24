@@ -51,6 +51,10 @@
   }
 }
 
+.btn {
+  color: red;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -75,7 +79,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 99;
   .logo {
     background-image: url(/src/logo.svg);
     min-width: 162px;
@@ -125,22 +129,26 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
+    // z-index: -1;
     position: relative;
     .mainTitle {
-      // border: 1px solid white;
       color: #fff;
       font-size: 22px;
       padding-right: 560px;
       min-width: 680px;
-      z-index: 4;
-      > img {
-        cursor: pointer;
+      cursor: pointer;
+      #mainTitleImg {
+        width: 680px;
+        z-index: 99;
+        position: relative;
       }
-      p {
+      .normal {
         margin: 28px 0;
         line-height: 37px;
-        cursor: pointer;
+        width: 420px;
+      }
+      .responsive {
+        display: none;
       }
       .imgs {
         #bgMain {
@@ -149,6 +157,13 @@ main {
           right: 360px;
           height: 855px;
           z-index: 1;
+        }
+        #bgMainR {
+          display: none;
+          width: 179px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
         }
         #ani1 {
           position: absolute;
@@ -207,6 +222,9 @@ main {
         right: 85px;
         z-index: 1;
       }
+      #bgObject1R {
+        display: none;
+      }
       #bgObject2 {
         position: absolute;
         top: 42px;
@@ -245,16 +263,19 @@ main {
         animation: infinite circle3 linear;
         animation-duration: 9s;
       }
+      #bgObjectOnlyR {
+        display: none;
+      }
     }
     .section1 {
       margin-left: 380px;
+      z-index: 10;
+      position: relative;
       h2 {
         font-size: 44px;
         font-family: NanumSquareRoundOTFEB;
         margin-top: 28px;
         margin-bottom: 42px;
-        position: relative;
-        z-index: 1;
       }
       p {
         color: #666666;
@@ -289,12 +310,18 @@ main {
         font-size: 70px;
         margin-bottom: 56px;
       }
+      #Rh2 {
+        display: none;
+      }
       p {
         color: #666666;
         font-size: 23px;
         line-height: 37px;
         margin-bottom: 56px;
         text-align: center;
+      }
+      p:last-of-type {
+        display: none;
       }
       div {
         background-color: #92f5d9;
@@ -316,6 +343,8 @@ main {
     }
     .section3 {
       display: flex;
+      z-index: 2;
+      position: relative;
       .desc {
         padding: 104px;
         padding-right: 0px;
@@ -325,7 +354,6 @@ main {
           margin-top: 28px;
           margin-bottom: 42px;
           position: relative;
-          z-index: 1;
           width: 420px;
         }
         p {
@@ -350,7 +378,6 @@ main {
       }
       .swiperBox {
         margin: 104px 0;
-        z-index: 1;
         .window {
           overflow: hidden;
           width: 1903px - 524px;
@@ -430,6 +457,19 @@ main {
               }
             }
           }
+        }
+      }
+      #R-Btn {
+        background-color: #92f5d9;
+        display: none;
+        padding: 18px 56px;
+        border-radius: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: NanumSquareRoundOTFEB;
+        transition: 0.28s;
+        &:hover {
+          background-color: #00eda9;
         }
       }
     }
@@ -533,6 +573,19 @@ main {
               background-image: url("/src/button_arrow_right_on.svg");
             }
           }
+        }
+      }
+      #R-Btn2 {
+        background-color: #92f5d9;
+        display: none;
+        padding: 18px 56px;
+        border-radius: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: NanumSquareRoundOTFEB;
+        transition: 0.28s;
+        &:hover {
+          background-color: #00eda9;
         }
       }
     }
