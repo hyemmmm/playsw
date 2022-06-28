@@ -1,11 +1,15 @@
 const header = document.querySelector("header");
 const fixed = document.querySelector(".fixed");
+const fixedR = document.querySelector(".fixedR");
 const leftBtn = document.querySelector("#buttonLeft");
 const rightBtn = document.querySelector("#buttonRight");
 const eduList = document.querySelector(".eduList");
 const leftBtn2 = document.querySelector("#buttonLeft2");
 const rightBtn2 = document.querySelector("#buttonRight2");
 const newsList = document.querySelector(".newsWindow ul");
+const menuBtn = document.querySelector("header .menuBtn");
+const XBox = document.querySelector(".X");
+const onClickHeader = document.querySelector(".headerOnclick");
 
 window.addEventListener("scroll", function () {
   let scroll = window.scrollY;
@@ -22,6 +26,14 @@ window.addEventListener("scroll", function () {
     fixed.classList.add("visible");
   } else {
     fixed.classList.remove("visible");
+  }
+});
+
+window.addEventListener("scroll", function () {
+  let scroll = window.scrollY;
+  fixedR.classList.add("visible");
+  if (scroll >= 2858) {
+    fixedR.classList.remove("visible");
   }
 });
 
@@ -85,4 +97,15 @@ rightBtn2.onclick = function () {
     leftBtn2.classList.add("on");
     NewscurrentIdx++;
   }
+};
+
+menuBtn.onclick = function () {
+  document.body.style.overflow = "hidden";
+  onClickHeader.classList.add("visible");
+};
+
+XBox.onclick = function () {
+  document.body.style.overflow = "auto";
+  document.body.style.overflowX = "hidden";
+  onClickHeader.classList.remove("visible");
 };

@@ -20,6 +20,7 @@
       height: 20px;
       cursor: pointer;
     }
+
     &.scroll {
       .menuBtn {
         background-image: url(/src/button_mo_gnb_black.svg);
@@ -320,6 +321,29 @@
         a {
           margin-right: 4px;
         }
+      }
+    }
+  }
+  .fixed {
+    &.visible {
+      display: none;
+    }
+  }
+  .fixedR {
+    padding: 16px 38px;
+    font-size: 18px;
+    &.visible {
+      display: inline-block;
+    }
+  }
+  .headerOnclick {
+    &.visible {
+      // display: flex;
+      z-index: 99;
+      background-color: rgba(0, 0, 0, 0.8);
+      .headerOnclick-onClickMenu {
+        transform: translateX(0px);
+        transition: 0.5s;
       }
     }
   }

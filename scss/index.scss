@@ -51,14 +51,11 @@
   }
 }
 
-.btn {
-  color: red;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 body {
   font-family: NanumSquareRoundOTFB, NanumSquareRoundOTF, sans-serif;
@@ -71,6 +68,20 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.btn {
+  background-color: #92f5d9;
+  display: inline-block;
+  padding: 18px 56px;
+  border-radius: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: NanumSquareRoundOTFEB;
+  transition: 0.28s;
+  &:hover {
+    background-color: #00eda9;
+  }
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -79,7 +90,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 99;
+  z-index: 98;
   .logo {
     background-image: url(/src/logo.svg);
     min-width: 162px;
@@ -139,7 +150,7 @@ main {
       cursor: pointer;
       #mainTitleImg {
         width: 680px;
-        z-index: 99;
+        z-index: 97;
         position: relative;
       }
       .normal {
@@ -283,19 +294,6 @@ main {
         line-height: 31px;
         margin-bottom: 56px;
       }
-      div {
-        background-color: #92f5d9;
-        display: inline-block;
-        padding: 18px 56px;
-        border-radius: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        font-family: NanumSquareRoundOTFEB;
-        transition: 0.28s;
-        &:hover {
-          background-color: #00eda9;
-        }
-      }
     }
     .section2 {
       display: flex;
@@ -323,28 +321,16 @@ main {
       p:last-of-type {
         display: none;
       }
-      div {
-        background-color: #92f5d9;
-        display: inline-block;
-        padding: 18px 56px;
-        border-radius: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        font-family: NanumSquareRoundOTFEB;
-        margin-bottom: 104px;
-        transition: 0.28s;
-        &:hover {
-          background-color: #00eda9;
-        }
-      }
       video {
         width: 988px;
+        margin-top: 56px;
       }
     }
     .section3 {
       display: flex;
       z-index: 2;
       position: relative;
+      margin-top: 280px;
       .desc {
         padding: 104px;
         padding-right: 0px;
@@ -361,19 +347,6 @@ main {
           font-size: 20px;
           line-height: 31px;
           margin-bottom: 42px;
-        }
-        div {
-          background-color: #92f5d9;
-          display: inline-block;
-          padding: 18px 56px;
-          border-radius: 28px;
-          font-weight: bold;
-          cursor: pointer;
-          font-family: NanumSquareRoundOTFEB;
-          transition: 0.28s;
-          &:hover {
-            background-color: #00eda9;
-          }
         }
       }
       .swiperBox {
@@ -493,20 +466,6 @@ main {
           line-height: 37px;
           margin-bottom: 56px;
           text-align: center;
-        }
-        div {
-          background-color: #92f5d9;
-          display: inline-block;
-          padding: 18px 56px;
-          border-radius: 28px;
-          font-weight: bold;
-          cursor: pointer;
-          font-family: NanumSquareRoundOTFEB;
-          margin-bottom: 104px;
-          transition: 0.28s;
-          &:hover {
-            background-color: #00eda9;
-          }
         }
       }
       .newsWindow {
@@ -660,7 +619,71 @@ footer {
   cursor: pointer;
   z-index: 10;
   font-size: 18px;
+  box-shadow: 3px 5px 5px 0 rgb(0 0 0 / 28%);
   &.visible {
     display: inline-block;
+  }
+}
+.fixedR {
+  display: none;
+  position: fixed;
+  right: 56px;
+  bottom: 28px;
+  background-color: #6e5ae6;
+  color: #fff;
+  padding: 20px 42px;
+  border-radius: 28px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 18px;
+  box-shadow: 3px 5px 5px 0 rgb(0 0 0 / 28%);
+}
+.headerOnclick {
+  z-index: -1;
+  // display: none;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  .headerOnclick-onClickMenu {
+    width: 240px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #434dfe;
+    padding: 24px;
+    transform: translateX(240px);
+    .headerOnclick-login {
+      color: #00eda9;
+      border: 3px dotted #00eda9;
+      padding: 14px 28px;
+      cursor: pointer;
+      border-radius: 28px;
+      width: 106px;
+    }
+    .headerOnclick-headerMenu {
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+      font-size: 18px;
+      letter-spacing: 0.3px;
+      li {
+        margin: 14px 0;
+      }
+    }
+    p {
+      color: #ddd;
+      font-size: 13px;
+      margin-bottom: 56px;
+    }
+    .X {
+      position: absolute;
+      right: 28px;
+      cursor: pointer;
+    }
   }
 }
